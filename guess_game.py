@@ -17,6 +17,10 @@ x=random.randint(start, end)
 for i in range(count):
     y=int(input(f"第{i+1}/{count}次：請猜一個數字({start} ~ {end}):"))
     
+    if y < start or y > end:
+        print("不要亂猜～")
+        continue
+
     if x==y:
         print("恭喜猜對!")
         break

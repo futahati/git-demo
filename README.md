@@ -232,6 +232,17 @@
   - 使用 GitHub 提供的 Download Zip(不會有.git資料夾)
 - 有專案在本地端時：
   - git pull
+- 確認遠端、本地端資料是否相符
+  - git fetch origin
+    - 先執行 Fetch (同步資訊)：本地電腦連上 GitHub，詢問：「嘿，那邊有新的東西嗎？」並把清單下載回來（但不會改動你的檔案）
+  - git status
+    - 查看對照結果
+      - 有差異
+        - Your branch is behind 'origin/master'...
+        - **behind**指GitHub比較新
+        - Your branch is ahead of 'origin/master' ...
+        - **ahead**指本地端比較新
+      - 無差異 → Your branch is up to date.
 
 # Vscode
 
@@ -248,6 +259,11 @@
   - Editor:Mouse Wheel Zoom (打勾 =>使用滑鼠縮放視窗)
   - Editor:Format On Paste (打勾)
   - Files:Exclude (刪除 =>\*\*/.git ，形成可見的資料夾)
+  - 設定使用html自動縮排程式碼
+    1. 搜尋 format
+    1. Editor:Format On Save →→ 打勾勾
+    1. Editor:Default Formatter →→ 選 HTML Language Features
+
 
 ### 視窗設定
 
@@ -269,9 +285,11 @@
 
 ### Terminal終端機設定(改為cmd) + Python環境設定
 
-- PS開頭 是 Bash 的終端機
-  - ctrl + shift + p => python:Select Interpreter => Python x.xx.x[版本號] ---------- Recommended
-  - Ctrl + Shift + P => 進階尋找 Default => 選 Terminal:Select Default Profile => 選 Command Prompt
+- 若PS開頭是 Bash 的終端機，要改！
+  1. 先設定Python環境
+      - ctrl + shift + p => python:Select Interpreter => Python x.xx.x[版本號] ---------- Recommended
+  1. 再設定cmd(之後開啟Terminal才會都是cmd)
+      - Ctrl + Shift + P => 進階尋找 Default => 選 Terminal:Select Default Profile => 選 Command Prompt
 
 ### 下載外部插件(快捷鍵Ctrl + Shift + X)
 
@@ -282,3 +300,7 @@
   - 程式碼上 → 按右鍵 → Format Document / Format Document With →設定
 - Dracula Theme Official (Dracula Theme) / install ← 模板(Theme)
   - Dracula Official更換模板 → 點選插件/Set Color Theme
+- Html即編即所見
+  - 下載Live Server → Install → 點擊Trust Publisher & Install
+  - 可選擇：Disabie開啟程式／Disabie(Workspace)關閉程式
+  - 使用方式：在Vscode上的.html檔案上，按右鍵後，選Open with Live Server

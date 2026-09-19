@@ -198,6 +198,49 @@
 - [強推] git push -f(-force 強制)
 
 ## 上傳(git push) GitHub 空間(第一次 + 後續上傳的指令；編輯至一段落，要記得上傳雲端。)
+- 狀態1：專案未git init(初始化) + 已在GitHub建立倉庫
+- 可直接使用GitHub提供的步驟(GitHub 給你的第一段)
+- …or create a new repository on the command line
+  ```python
+  echo "# fix-flow" >> README.md
+  git init
+  git add README.md
+  git commit -m "first commit"
+  git branch -M main
+  git remote add origin https://github.com/[GitHub帳號名稱]/[GitHub上設定的專案名稱].git
+  git push -u origin main
+  ```
+- 狀態2：專案已git init(初始化) + 已建立README.md + 已在GitHub建立倉庫
+- 可直接使用GitHub提供的步驟(GitHub 給你的第二段)
+- …or push an existing repository from the command line
+  ```python
+  git remote add origin https://github.com/[GitHub帳號名稱]/[GitHub上設定的專案名稱].git
+  git branch -M main
+  git push -u origin main
+  ```
+- 狀態3：`新增建立 requirements.txt 檔案` + 專案未git init(初始化) + 已在GitHub建立倉庫
+  ```python
+  # 1. 初始化本地 Git 倉庫
+  git init
+  
+  # 2. 生成套件清單 (確保 requirements.txt 存在)
+  pip freeze > requirements.txt
+  
+  # 3. 將所有檔案加入暫存區
+  git add .
+  
+  # 4. 提交第一次 commit
+  git commit -m "XXXXXXXXX"  # XXXXXXXXX填寫範例：第一次上傳GitHub
+  
+  # 5. 將分支名稱切換為 main
+  git branch -M main
+  
+  # 6. 綁定到你的 GitHub 倉庫
+  git remote add origin https://github.com/[GitHub帳號名稱]/[GitHub上設定的專案名稱].git
+  
+  # 7. 將程式碼推送到 GitHub
+  git push -u origin main
+  ```
 
 - 於 GitHub 建立遠端儲存庫
 - 取得遠端儲存庫位址

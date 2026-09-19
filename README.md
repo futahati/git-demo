@@ -191,7 +191,8 @@
 # github
 
 - 申請github
-- 上傳(綁定)到雲端 git remote add origin https://github.com/futahati/git-demo.git
+- 上傳(綁定)到雲端 git remote add origin https://github.com/ YOUR_USERNAME / YOUR_REPOSITORY .git
+  > YOUR_USERNAME 是你的 GitHub 帳號名稱； YOUR_REPOSITORY 是你的 GitHub 專案名稱
 - 檢視雲端網址 git remote -v
 - (第一次)推送至雲端 git push -u origin 主支名稱 例：git push -u origin master
 - 從雲端「推上」git push
@@ -207,14 +208,18 @@
   git add README.md
   git commit -m "first commit"
   git branch -M main
-  git remote add origin https://github.com/[GitHub帳號名稱]/[GitHub上設定的專案名稱].git
+  
+  # YOUR_USERNAME 是你的 GitHub 帳號名稱； YOUR_REPOSITORY 是你的 GitHub 專案名稱
+  git remote add origin https://github.com/ YOUR_USERNAME / YOUR_REPOSITORY .git
+  
   git push -u origin main
   ```
 - 狀態2：專案已git init(初始化) + 已建立README.md + 已在GitHub建立倉庫
 - 可直接使用GitHub提供的步驟(GitHub 給你的第二段)
 - …or push an existing repository from the command line
   ```python
-  git remote add origin https://github.com/[GitHub帳號名稱]/[GitHub上設定的專案名稱].git
+  # YOUR_USERNAME 是你的 GitHub 帳號名稱； YOUR_REPOSITORY 是你的 GitHub 專案名稱
+  git remote add origin https://github.com/ YOUR_USERNAME / YOUR_REPOSITORY .git
   git branch -M main
   git push -u origin main
   ```
@@ -236,7 +241,8 @@
   git branch -M main
   
   # 6. 綁定到你的 GitHub 倉庫
-  git remote add origin https://github.com/[GitHub帳號名稱]/[GitHub上設定的專案名稱].git
+  # YOUR_USERNAME 是你的 GitHub 帳號名稱； YOUR_REPOSITORY 是你的 GitHub 專案名稱
+  git remote add origin https://github.com/ YOUR_USERNAME / YOUR_REPOSITORY .git
   
   # 7. 將程式碼推送到 GitHub
   git push -u origin main
